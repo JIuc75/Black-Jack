@@ -19,7 +19,9 @@ class Game
 
   def deal
     @deck = Deck.new
-    @user.hand.add_card(@deck.take_card)
+    2.times do
+      @user.hand.add_card(@deck.take_card)
+    end
   end
 
   def start

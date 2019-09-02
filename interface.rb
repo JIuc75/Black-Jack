@@ -11,7 +11,7 @@ class Interface
 
   def show_hand(hand)
     hand.each do |card|
-      puts "[#{card.value}#{card.suit}] "
+      print "[#{card.value}#{card.suit}] "
     end
   end
 
