@@ -1,13 +1,11 @@
-# frozen_string_literal: true
-
-# Players class
 class Players
+  attr_accessor :bankroll
   attr_reader :name, :hand
-  attr_accessor :money
 
   def initialize(name)
+    name = 'Игрок' if name.empty?
     @name = name
+    @bankroll = 100
     @hand = Hand.new
-    @money = 100
   end
 end

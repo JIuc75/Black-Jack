@@ -1,11 +1,8 @@
-# frozen_string_literal: true
-
-# Class Hand
 class Hand
   attr_reader :cards, :score
 
   def initialize
-    @cards = []
+    @cards = []    
   end
 
   def add_card(card)
@@ -15,9 +12,7 @@ class Hand
   def calc_score
     @score = 0
     @cards.each { |card| @score += card.score }
-    @cards.select { |card| card.value =~ /A/ }.each do
-      @score -= 10 if @score > 21
-    end
+    @cards.select { |card| card.value =~ /A/ }.each { @score -= 10 if @score > 21 }
   end
 
   def drop
