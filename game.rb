@@ -8,12 +8,12 @@ class Game
   end
 
   def create_player
-    @player = Player.new(@interface.create_player)
+    @player = Players.new(@interface.create_player)
     @interface.player = @player
   end
 
   def start
-    @dealer = Player.new('Dealer')
+    @dealer = Players.new('Dealer')
     @interface.dealer = @dealer
     loop do
       @deck = Deck.new
@@ -31,6 +31,7 @@ class Game
     2.times { @player.hand.add_card(@deck.take_card) }
     loop do
       @dealer.hand.calc_score
+      @player.hand.calc_score
       @dealer.hand.add_card(@deck.take_card) if @dealer.hand.score < 17
       @interface.round(@round)
       action_player

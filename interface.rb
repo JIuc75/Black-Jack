@@ -25,6 +25,7 @@ class Interface
     puts "\n Банк #{@bank}"
     print "Рука игрока (#{@player.name}): "
     look_hand(@player.hand.cards)
+    print "очки: #{@player.hand.score} "
     puts "Ваши деньги #{@player.bankroll}"
     puts "\n Ваш выбор?"
   end
