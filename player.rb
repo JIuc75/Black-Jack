@@ -1,4 +1,4 @@
-class Players
+class Player
   attr_accessor :bankroll
   attr_reader :name, :hand
 

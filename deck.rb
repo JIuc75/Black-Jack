@@ -11,7 +11,7 @@ class Deck
 
   def create_deck
     VALUES.each do |value|
-      SUITS.each { |suit| @cards << Cards.new(value, suit) }
+      SUITS.each { |suit| @cards << Card.new(value, suit) }
     end
   end
 

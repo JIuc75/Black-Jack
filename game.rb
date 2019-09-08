@@ -8,12 +8,12 @@ class Game
   end
 
   def create_player
-    @player = Players.new(@interface.create_player)
+    @player = Player.new(@interface.create_player)
     @interface.player = @player
   end
 
   def start
-    @dealer = Players.new('Dealer')
+    @dealer = Player.new('Dealer')
     @interface.dealer = @dealer
     loop do
       @deck = Deck.new
@@ -70,7 +70,7 @@ class Game
     return @player.name if @player.hand.score == 21
     return 'Dealer' if @player.hand.score > 21
     return 'PUSH' if @player.hand.score == @dealer.hand.score
-    return @player.name if @player.hand.score < 21 &&  @dealer.hand.score > 21
+    return @player.name if @player.hand.score < 21 && @dealer.hand.score > 21
 
     @dealer.hand.score < @player.hand.score ? @player.name : 'Dealer'
   end

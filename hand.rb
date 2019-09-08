@@ -2,7 +2,7 @@ class Hand
   attr_reader :cards, :score
 
   def initialize
-    @cards = []    
+    @cards = []
   end
 
   def add_card(card)
