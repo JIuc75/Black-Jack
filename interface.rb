@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# class
 class Interface
   attr_accessor :player, :dealer, :bank
   attr_reader :stop_game

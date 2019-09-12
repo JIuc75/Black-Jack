@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# class
 class Deck < Card
   def initialize
     @cards = []

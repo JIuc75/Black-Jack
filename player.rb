@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# class
 class Player
   attr_accessor :bankroll
   attr_reader :name, :hand
