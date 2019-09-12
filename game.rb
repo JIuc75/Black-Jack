@@ -1,6 +1,6 @@
 class Game
-  def initialize
-    @interface = Interface.new
+  def initialize(interface)
+    @interface = interface
     return if @interface.stop_game
 
     create_player

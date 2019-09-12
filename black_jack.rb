@@ -5,4 +5,5 @@ require_relative 'hand'
 require_relative 'game'
 require_relative 'interface'
 
-Game.new
+interface = Interface.new
+Game.new(interface)
